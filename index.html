@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagenes/icono.png" type="image/png">
+    <title>C++ / Programacion modular</title>
+</head>
+<body>
+   
+    <h1>
+        <span class="celeste">C++</span> / Estructuras de control - <code>Programación modular</code> (Funciones).
+    </h1>
+    <p>
+        En el lenguaje de programación <span class="celeste">C++</span>, las funciones son bloques de código que realizan una o varias tareas y pueden ser llamados desde otras partes del programa. Las funciones permiten la modularización del código, mejorando la legibilidad y la reutilización.
+    </p>
+    <h3>Diagrama de flujo</h3>
+    <div class="center">
+        <img src="Imagenes/imagen2.png" alt="">
+    </div>
+    <h3>
+        Defición de función.
+    </h3>
+<pre><code class="cpp"><span class="tur">void</span> funcion<span class="rojo">()</span><span class="gris">// Defición de función.</span>
+    <span class="rojo">{</span>
+        <span class="gris">// Cuerpo de la función.</span>
+    <span class="rojo">}</span></code></pre>
+   
+    <hr>
+   
+    <b>Ejemplo de función simple:</b><br>
+    <p>
+        Realizaremos una función llamada <code class="gris">sumar</code> que recibá dos números enteros como parámetros. Estos dos parámetros se sumarán y la función retornara el resultado. Una vez que hayamos definido la función, la utilizaremos en nuestro programa principal.
+    </p>
+<pre><code class="cpp"><span class="rojo">#include &lt;iostream></span>
+<span class="tur">using namespace </span>std<span class="rojo">;</span>
+<span class="tur">int</span> sumar<span class="rojo">(</span><span class="tur">int</span> a <span class="rojo">, </span><span class="tur">int</span> b<span class="rojo">)</span>   <span class="gris">// Definición de la función.</span>
+    <span class="rojo">{</span>
+        <span class="tur">return</span> a <span class="rojo">+</span> b <span class="rojo">;</span>
+    <span class="rojo">}</span>
+
+<span class="tur">int</span> main <span class="rojo">(){</span>
+    <span class="tur">int</span> n1<span class="rojo">,</span> n2<span class="rojo">,</span> resultado<span class="rojo">;</span>
+    cin<span class="rojo">>></span>n1<span class="rojo">;</span>
+    cin<span class="rojo">>></span>n2<span class="rojo">;</span>
+    resultado <span class="rojo">=</span> sumar<span class="rojo">(</span>n1<span class="rojo">,</span> n2<span class="rojo">);</span>  <span class="gris">//Invocación de la función.</span>
+    cout<span class="rojo">&lt;&lt;</span><span class="dorado">"El resultado es: "</span><span class="rojo">&lt;&lt;</span>resultado<span class="rojo">;</span>
+    <span class="tur">return</span> <span class="violeta">0</span><span class="rojo">;</span>
+<span class="rojo">}</span>
+
+</code></pre><br>
+    <h3>
+        Funcion sin <code class="gris">Argumento</code> y sin <code class="gris">Retorno</code>.
+    </h3>
+    <p>
+        Las funciones también pueden no recibir argumentos ni devolver valores. En estos casos, se utiliza <code>void</code> como tipo de retorno.
+    </p>
+<pre><code class="cpp"><span class="rojo">#include &lt;iostream></span>
+<span class="tur">using namespace </span>std<span class="rojo">;</span>
+<span class="tur">void</span> saludar<span class="rojo">();</span>    <span class="gris">// Declaración de la función.</span>
+
+<span class="tur">int</span> main <span class="rojo">(){</span>
+    <span class="tur">saludar</span><span class="rojo">();</span>   <span class="gris">// Invocación de la función.</span> 
+    <span class="tur">return</span> <span class="violeta">0</span><span class="rojo">;</span>
+<span class="rojo">}</span>
+
+<span class="tur">void</span> saludar<span class="rojo">()</span>   <span class="gris">// Definición de la función.</span>
+    <span class="rojo">{</span>
+        cout<span class="rojo">&lt;&lt;</span><span class="dorado">"Hola. "</span><span class="rojo">;</span>
+    <span class="rojo">}</span></code></pre><br>
+    <h3>
+        Funciones con <code class="gris">Argumentos</code>.
+    </h3>
+    <p>
+        Las funciones pueden recibir argumentos para realizar operaciones. Los argumentos se especifican en la lista de argumentos durante la declaración y definición de la función. 
+    </p>
+<pre><code class="cpp"><span class="rojo">#include &lt;iostream></span>
+<span class="tur">using namespace </span>std<span class="rojo">;</span>
+<span class="tur">void</span> escribir<span class="rojo">(</span> <span class="tur">string</span> <span class="naranja">a</span> <span class="rojo">);</span>    <span class="gris">// Declaración de la función con argumento del tipo string.</span>
+
+<span class="tur">int</span> main <span class="rojo">(){</span>
+    <span class="tur">escribir</span><span class="rojo">(</span> <span class="dorado">"Hola Mundo. "</span><span class="rojo">);</span>   <span class="gris">// Invocación de la función.</span> 
+    <span class="tur">return</span> <span class="violeta">0</span><span class="rojo">;</span>
+<span class="rojo">}</span>
+
+<span class="tur">void</span> escribir<span class="rojo">(</span> <span class="tur">string</span> <span class="naranja">a</span> <span class="rojo">)</span>   <span class="gris">// Definición de la función.</span>
+    <span class="rojo">{</span>
+        cout<span class="rojo">&lt;&lt;</span> <span class="naranja">a</span> <span class="rojo">;</span>
+    <span class="rojo">}</span></code></pre><br>
+    <h3>
+        Funcion con <code>Retorno</code>.
+    </h3>
+    <p>
+        El valor de retorno es el resultado que una función devuelve después de su ejecución. El tipo de retorno debe coincidir con el tipo especificado en la declaración de la función.
+    </p>
+<pre><code class="cpp"><span class="rojo">#include &lt;iostream></span>
+<span class="tur">using namespace </span>std<span class="rojo">;</span>
+<span class="tur">float</span> dividir<span class="rojo">(</span> <span class="tur">float</span> x <span class="rojo">,</span> <span class="tur">float</span> y <span class="rojo">);</span>    <span class="gris">// Declaración de la función.</span>
+
+<span class="tur">int</span> main <span class="rojo">(){</span>
+    cout <span class="rojo">&lt;&lt;</span><span class="dorado">"El resultado es: "</span><span class="rojo">&lt;&lt;</span>dividir<span class="rojo">(</span><span class="celeste">6</span><span class="rojo">,</span><span class="celeste">3</span><span class="rojo">)</span><span class="gris">// Invocación de la función.</span> 
+    <span class="tur">return</span> <span class="violeta">0</span><span class="rojo">;</span>
+<span class="rojo">}</span>
+
+<span class="tur">float</span> dividir<span class="rojo">(</span> <span class="tur">float</span> x<span class="rojo">,</span> <span class="tur">float</span> y <span class="rojo">)</span>   <span class="gris">// Definición de la función.</span>
+    <span class="rojo">{</span>
+        <span class="tur">return</span> x <span class="rojo">/</span> y <span class="rojo">;</span>
+    <span class="rojo">}</span></code></pre><br>
+
+    <fieldset>
+        <legend>Ejercicios</legend>
+        <ol>
+            <li>
+                <p>
+                    Desarrollar un programa que contenga tres funciones: <span class="verde">escribir</span>, <span class="verde">leer</span> y <span class="verde">esperar</span>. La función escribir deberá recibir un dato mediante un parámetro <i>(tipo de dato string)</i> y utilizar <span class="celeste">cout</span> dentro de su definición para mostrar dicho dato en pantalla. La función <span class="verde">leer</span> deberá utilizar <span class="celeste">cin</span> dentro de su definición para solicitar ,y recibir un dato del usuario para retornarlo como una varibla del tipo <span class="celeste">int</span>, además tendra un parametro del tipo string para poder ingresarte un texto y que imprima en pantalla el texto antes de ingresar el dato. Por último, la función esperar deberá recibir mediante un parámetro una cantidad de tiempo y utilizar <span class="celeste">sleep</span> para realizar una pausa durante ese período. El programa principal deberá utilizar las tres funciones para demostrar su funcionamiento.
+                </p>
+                 <p>
+                   En la función <code class="gris">main()</code> solo se podrá utilizar el siguiente código:
+                </p>
+<pre><code class="cpp">    escribir<span class="rojo">(</span><span class="dorado">"Hola mundo"</span><span class="rojo">);</span>
+    <span class="tur">int</span> valor <span class="rojo">=</span> leer<span class="rojo">(</span><span class="dorado">"Ingrese un numero entero"</span><span class="rojo">)</span>;
+    espera<span class="rojo">(</span><span class="violeta">5</span><span class="rojo">)</span>;
+    cout<span class="rojo">&lt;&lt;</span><span class="dorado">"Fin"</span>;</code></pre>
+                <br>
+                <p>
+                    <center>
+                        ⚠️<i>Utilice la librería: <code class="gris">#include &lt;string></code>, para poder utilizar tipo de dato <span class="celeste">string</span></i>⚠️
+                    </center>
+                </p>
+                <br>
+                <center>
+                    <iframe width="913" height="614" src="https://www.youtube.com/embed/cCGy6luyJxE" title="Programación modular - Ejercicio 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </center>
+               
+                <br>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Desarrolle un programa para implementar una calculadora básica con un menú que permita al usuario seleccionar la operación deseada (<code class="gris">suma</code>, <code class="gris">restar</code>, <code class="gris">multiplicación</code> y <code class="gris">división</code>). 
+                </p>
+                <br>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Desarrollar un programa que contenga dos funciones. Cada una de las funciones deberá solicitar al usuario el ingreso de 3 números, almacenar esos valores en un <span class="celeste">array</span> <b>(Use estructura de repetición)</b>. Y dentro de la misma función, calcular la suma de los tres números ingresados. Una vez realizada la suma, cada función deberá <span class="violet">retornar</span> el total obtenido. Finalmente, crear una tercera función que reciba como parámetros los dos valores retornados por las funciones anteriores, los sume y muestre por pantalla el resultado total.
+                </p>
+                <p>
+                   En la función <code class="gris">main()</code> solo se podrá utilizar el siguiente código:
+                </p>
+<pre><code class="cpp">suma<span class="rojo">(</span>f2 <span class="rojo">(),</span>f1<span class="rojo">());</span></code></pre>
+                <center>
+                    <i>Video del ejercicio:</i>
+                    <iframe width="772" height="614" src="https://www.youtube.com/embed/f3C7PVC5keA" title="Programacion modular - Ejercicio 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </center>
+                <br>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Desarrolla un programa que simule el control de una máquina industrial básica. El programa debe ofrecer un menú que permita al usuario realizar diversas operaciones de control sobre la máquina, además una vez seleccionado la opción del programa debe consultar al usuario si quiere volver a ejecutar el programa. A continuacion, una lista de los modulos que debera tener el programa.
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            <code class="gris">menu</code>: El programa debe tener un modulo que muestre el menu en pantalla y pide al usuario que ingrese la opcion.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">encenderMaquina</code>: Este módulo debera encender la máquina si aún no está encendida. Si la máquina ya está encendida, mostrará un mensaje indicando que ya está en funcionamiento y además tomara una velocidad 2850 RPM.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">apagarMaquina</code> Este módulo permite apagar la máquina. Al apagarla, también se reinicia la velocidad de la máquina a cero.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">estadoMaquina</code>: Muestra al usuario el estado actual de la máquina, incluyendo si está encendida o apagada y la velocidad actual.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">salir</code>: Finaliza la ejecución del programa.
+                        </p>
+                    </li>
+                </ol>
+                <p>
+                    El programa debe impletar funciones separadas para cada una de las operaciones mencionadas.
+                </p>
+                <br>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Desarrolle un programa <span class="celeste">C++</span> que solicite al usuario el ingreso de un número entero y utilice una función que reciba dicho número como parámetro. La función deberá determinar y mostrar en pantalla cuántos dígitos contiene el número, utilizando una estructura de repetición <code class="gris">while</code>.
+                </p>
+                <p>
+                    <b>Ayuda</b>: Para obtener la cantidad de dígitos, piense qué sucede cuando divide el número por 10 y guarde nuevamente el resultado en una variable luego, dentro del <code class="gris">while</code>, evalúe si ese resultado es mayor que 0. Cada vez que se realice una división, deberá incrementar un contador, hasta que el resultado de la división sea 0.
+                </p>
+                <div class="center">
+                    <img src="Imagenes/imagen1.jpg" alt="">
+                </div>
+                <br>
+
+                <center>
+                    <i>Video del ejercicio:</i>
+                    <iframe width="1059" height="419" src="https://www.youtube.com/embed/KdQxhf3gVKA" title="Programacion modular - Ejercicio 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </center>
+                <br>
+                <hr>
+            </li>
+            <li>
+                <p>
+                    Desarrolle un programa que simule el funcionamiento de un cajero automático básico. El programa debe solicitar al usuario que ingrese su número de cuenta, el cual debe tener el formato <code class="gris">0000001</code>, si ingresa otro numero de cuenta debe avisar que se produjo un <code class="gris">error</code> y luego le debe permitir crear una contraseña personal de 4 digitos numéricos para acceder a su cuenta.
+                </p>
+                <p>
+                    Una vez validado el ingreso, el programa debe ofrecer un menú con diferentes opciones para realizar, operaciones típicas de un cajero automático, como consultar saldo, realizar otra operación, depositar dinero, retirar dinero y salir del sistema.
+                </p>
+                <b><u>Funciones</u>:</b><br>
+                <ol>
+                    <li>
+                        <p>
+                            <code class="gris">login</code>: Es el comienzo es la funcion que permite logear al usuario.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">menu</code>: Esta opción muestra el menu de opciones del cajero automatico
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">consultarSaldo</code>: Esta opción permite al usuario ver el saldo actual disponible en su cuenta bancaria.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">volverOperacionn</code>: Esta opción permite volver a ejecutar el programa deesde el principio <code class="gris">menu</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">retirarDinero</code>: Permite al usuario rertirar una cantidad específica de dinero de su cuenta, siemmpre y cuando tenga fondos suficientes disponibles.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <code class="gris">salir</code>: Finaliza la sesión de esa cuenta.
+                        </p>
+                    </li>
+    
+                </ol>
+                <p>
+                    El programa debe implementar funciones separadas parra cada una de las operaciones mencionadas.
+                </p>
+            </li>
+            <li>
+
+                <div class="center p">  
+                    <p class="incio desarrollo">
+                        En desarrollo 👨‍💻.
+                    </p>
+                </div>
+                <!--
+                
+                <p>
+                    Desarrolle un programa en <span class="celeste">C++</span> que permita gestionar los datos de un grupo de alumnos mediante el uso de funciones. El programa deberá contar con una función llamada <code class="gris">menu()</code> que muestre las siguiente opciones: <b>1.Agregar alumno, 2.Eliminar alumno y 3.Mostrar tabla</b>. La función <code class="gris">menu()</code> deberá retornar la opción seleccionada por el usuario. En <code class="gris">main()</code> se deberá utilizar una estructura condicional para determinar que función corresponde ejecutar.
+                </p>
+                <p>
+                    La opción <b>Agregar alumno</b> deberá solicitar nombre del alumno y almacenarlo en un array llamado <code class="gris">nombres</code> del tipo de dato texto. También deberá solicitar la edad y almacenarla en un array llamado <code class="gris">edades</code> de tipo numeros enteros. Finalmente, deberá solicitar el turno y almacenarlo en un array llamado <code class="gris">turnos</code> de tipo caracter, utilizando <code>M</code> para turno mañana o <code>T</code> para turno tarde. Si ingresa un carácter diferente a <code>M</code> o <code>T</code>, se deberá solicitar nuevamente el turno hasta ingresar una opción válida.
+                </p>
+                <p>
+                    La opción <b>Eliminar alumno</b> deberá permitir seleccionar un alumno por su nombre y eliminar sus datos de los arrays correspondientes. Luego de eliminarlo, si existen otros alumnos almacenados posteriormente en los arrays, sus datos deberán desplazarse una posición hacia atrás para ocupar el lugar del alumno eliminado.
+                </p>
+                <p>
+                    La opción <b>Mostrar tabla</b> deberá mostrar en forma organizada todos los alumnos registrados junto con su nombre, edad y turno. Una vez finalizada la tabla, deberá solicitar al usuario que ingrese <code class="gris">Y</code> parra continuar. Al ingresar <code class="gris">Y</code>, el programa deberá regresar al menú inicial.
+                </p>
+                <h3>
+                    Ayuda métodos para arrays.
+                </h3>
+                <p>
+
+                </p>
+                <br>
+                <hr>
+                <h3>
+                    Ayuda para crear la tabla.
+                </h3>
+                <p>
+                    Para organizar los datos en forma de tabla se utilizara la siguiente biblioteca:
+                </p>
+<pre><code class="cpp">    <span class="rojo">#include&lt;iomanip></span></code></pre>
+                <p>
+                    Esta biblioteca permite utilizar herramientass para dar formato a la salida de datos.
+                </p>
+                <h4>setw()</h4>
+                <p>
+                    Significa <b>set width</b> (En español: Establecer ancho) y permite establecer el ancho que ocupará el siguiente dato que se muestre con <code class="gris">cout</code>
+                </p>
+                <p>
+                    Por ejemplo:
+                </p>
+<pre><code class="cpp">    cout<span class="rojo">&lt;&lt;</span> setw <span class="rojo">(<span class="violeta">20</span>)&lt;&lt;</span><span class="dorado">"NOMBRE"</span>;</code></pre>
+                <p>
+                    Esto reserva 20 espacios para mostrar <code class="gris">NOMBRE</code>. Podemos utilizarlo para crear las columnas:
+                </p>
+<pre><code class="cpp">    cout<span class="rojo">&lt;&lt;</span>setw<span class="rojo">(<span class="violeta">20</span>)&lt;&lt;</span><span class="dorado">"NOMBRE"</span>
+    <span class="rojo">&lt;&lt;</span></span>setw<span class="rojo">(<span class="violeta">10</span>)&lt;&lt;</span><span class="dorado">"EDAD"</span>
+    <span class="rojo">&lt;&lt;</span></span>setw<span class="rojo">(<span class="violeta">10</span>)&lt;&lt;</span><span class="dorado">"TURNO"</span><span class="rojo">&lt;&lt;</span>endl<span class="rojo">;</span></code></pre><br>
+                <p>
+                    Mostras los datos de los arrays:
+                </p>
+<pre><code class="cpp">    cout<span class="rojo">&lt;&lt;</span>setw<span class="rojo">(<span class="violeta">20</span>)&lt;&lt;</span>nombres<span class="rojo">[</span><span class="violeta">0</span><span class="rojo">]</span>
+    <span class="rojo">&lt;&lt;</span></span>setw<span class="rojo">(<span class="violeta">10</span>)&lt;&lt;</span>edades<span class="rojo">[</span><span class="violeta">0</span><span class="rojo">]</span>
+    <span class="rojo">&lt;&lt;</span></span>setw<span class="rojo">(<span class="violeta">10</span>)&lt;&lt;</span>turnos<span class="rojo">[</span><span class="violeta">0</span><span class="rojo">]</span><span class="rojo">&lt;&lt;</span>endl<span class="rojo">;</span></code></pre><br>     -->  
+            </li>
+            
+        </ol>
+    </fieldset>
+ 
+  <br><br><hr>
+
+</body>
+</html>

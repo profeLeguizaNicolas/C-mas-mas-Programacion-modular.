@@ -1,0 +1,9 @@
+td, th{
+    border: 2px red dotted;
+}
+.der{
+    border-right: 2px black solid;
+}
+.aba{
+    border-bottom: 5px green double;
+}
